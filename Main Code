@@ -1,0 +1,71 @@
+/*
+  Fading
+
+  This example shows how to fade an LED using the analogWrite() function.
+
+  The circuit:
+  - LED attached from digital pin 9 to ground through 220 ohm resistor.
+
+  created 1 Nov 2008
+  by David A. Mellis
+  modified 30 Aug 2011
+  by Tom Igoe
+
+  This example code is in the public domain.
+
+  https://docs.arduino.cc/built-in-examples/analog/Fading/
+*/
+int p9 = 9;
+int p10 = 10;
+int p11 = 11;  // LED connected to digital pin 11
+int x = 15;
+
+void setup() {
+  // nothing happens in setup
+}
+
+void loop() {
+  // fade in from min to max in increments of 5 points:
+  //Pin11
+  for (int fadeValue = 0; fadeValue <= 255; fadeValue += 5) {
+    // sets the value (range from 0 to 255):
+    analogWrite(p11, fadeValue);
+    // wait for 25 milliseconds to see the dimming effect
+    delay(x);
+  }
+  //Pin10
+  for (int fadeValue2 = 0; fadeValue2 <= 255; fadeValue2 += 5) {
+    // sets the value (range from 0 to 255):
+    analogWrite(p10, fadeValue2);
+    // wait for 25 milliseconds to see the dimming effect
+    delay(x);
+  }
+  //Pin9
+   for (int fadeValue3 = 0; fadeValue3 <= 255; fadeValue3 += 5) {
+    // sets the value (range from 0 to 255):
+    analogWrite(p9, fadeValue3);
+    // wait for 25 milliseconds to see the dimming effect
+    delay(x);
+  }
+  // fade out from max to min in increments of 5 points:
+  for (int fadeValue = 255; fadeValue >= 0; fadeValue -= 5) {
+    // sets the value (range from 0 to 255):
+    analogWrite(p11, fadeValue);
+    // wait for 25 milliseconds to see the dimming effect
+    delay(x);
+  }
+
+   for (int fadeValue2 = 255; fadeValue2 >= 0; fadeValue2 -= 5) {
+    // sets the value (range from 0 to 255):
+    analogWrite(p10, fadeValue2);
+    // wait for 25 milliseconds to see the dimming effect
+    delay(x);
+  }
+  //Pin9
+   for (int fadeValue3 = 255; fadeValue3 >= 0; fadeValue3 -= 5) {
+    // sets the value (range from 0 to 255):
+    analogWrite(p9, fadeValue3);
+    // wait for 25 milliseconds to see the dimming effect
+    delay(x);
+  }
+}
