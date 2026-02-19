@@ -15,10 +15,13 @@
 
   https://docs.arduino.cc/built-in-examples/analog/Fading/
 */
+int p3 = 3;
+int p5 = 5;
+int p6 = 6;
 int p9 = 9;
 int p10 = 10;
 int p11 = 11;  // LED connected to digital pin 11
-int x = 15;
+int x = 10;
 
 void setup() {
   // nothing happens in setup
@@ -30,42 +33,84 @@ void loop() {
   for (int fadeValue = 0; fadeValue <= 255; fadeValue += 5) {
     // sets the value (range from 0 to 255):
     analogWrite(p11, fadeValue);
-    // wait for 25 milliseconds to see the dimming effect
+    // wait for x milliseconds to see the dimming effect
     delay(x);
   }
   //Pin10
   for (int fadeValue2 = 0; fadeValue2 <= 255; fadeValue2 += 5) {
     // sets the value (range from 0 to 255):
     analogWrite(p10, fadeValue2);
-    // wait for 25 milliseconds to see the dimming effect
+    // wait for x milliseconds to see the dimming effect
     delay(x);
   }
   //Pin9
    for (int fadeValue3 = 0; fadeValue3 <= 255; fadeValue3 += 5) {
     // sets the value (range from 0 to 255):
     analogWrite(p9, fadeValue3);
-    // wait for 25 milliseconds to see the dimming effect
+    // wait for x milliseconds to see the dimming effect
     delay(x);
   }
-  // fade out from max to min in increments of 5 points:
+  //Pin6
+   for (int fadeValue4 = 0; fadeValue4 <= 255; fadeValue4 += 5) {
+    // sets the value (range from 0 to 255):
+    analogWrite(p6, fadeValue4);
+    // wait for x milliseconds to see the dimming effect
+    delay(x);
+  }
+  //Pin5
+   for (int fadeValue5 = 0; fadeValue5 <= 255; fadeValue5 += 5) {
+    // sets the value (range from 0 to 255):
+    analogWrite(p5, fadeValue5);
+    // wait for x milliseconds to see the dimming effect
+    delay(x);
+  }
+   //Pin3
+   for (int fadeValue6 = 0; fadeValue6 <= 255; fadeValue6 += 5) {
+    // sets the value (range from 0 to 255):
+    analogWrite(p3, fadeValue6);
+    // wait for x milliseconds to see the dimming effect
+    delay(x);
+  }
+  // fade out from max to min in increments of 5 points: Pin 11
   for (int fadeValue = 255; fadeValue >= 0; fadeValue -= 5) {
     // sets the value (range from 0 to 255):
     analogWrite(p11, fadeValue);
-    // wait for 25 milliseconds to see the dimming effect
+    // wait for x milliseconds to see the dimming effect
     delay(x);
   }
-
-   for (int fadeValue2 = 255; fadeValue2 >= 0; fadeValue2 -= 5) {
+  //Pin10
+  for (int fadeValue2 = 255; fadeValue2 >= 0; fadeValue2 -= 5) {
     // sets the value (range from 0 to 255):
     analogWrite(p10, fadeValue2);
-    // wait for 25 milliseconds to see the dimming effect
+    // wait for x milliseconds to see the dimming effect
     delay(x);
   }
   //Pin9
-   for (int fadeValue3 = 255; fadeValue3 >= 0; fadeValue3 -= 5) {
+  for (int fadeValue3 = 255; fadeValue3 >= 0; fadeValue3 -= 5) {
     // sets the value (range from 0 to 255):
     analogWrite(p9, fadeValue3);
-    // wait for 25 milliseconds to see the dimming effect
+    // wait for x milliseconds to see the dimming effect
+    delay(x);
+  }
+  //Pin6
+  for (int fadeValue4 = 255; fadeValue4 >= 0; fadeValue4 -= 5) {
+    // sets the value (range from 0 to 255):
+    analogWrite(p6, fadeValue4);
+    // wait for x milliseconds to see the dimming effect
+    delay(x);
+  }
+  //Pin5
+  for (int fadeValue5 = 255; fadeValue5 >= 0; fadeValue5 -= 5) {
+    // sets the value (range from 0 to 255):
+    analogWrite(p5, fadeValue5);
+    // wait for x milliseconds to see the dimming effect
+    delay(x);
+  }
+  //Pin3
+   for (int fadeValue6 = 255; fadeValue6 >= 0; fadeValue6 -= 5) {
+    // sets the value (range from 0 to 255):
+    analogWrite(p3, fadeValue6);
+    // wait for x milliseconds to see the dimming effect
     delay(x);
   }
 }
